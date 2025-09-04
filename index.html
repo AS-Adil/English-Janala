@@ -1,11 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>hello  </h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title and fav icon  -->
+    <title>English Janala</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/png" />
+
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fot awsome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- daisy ui and tailwind  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- style sheet  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header section start  -->
+    <header>
+      <nav>
+        <div class="navbar bg-base-100 shadow-sm">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow space-y-2"
+              >
+                <li>
+                  <a href="" class="btn btn-outline btn-primary">
+                    <i class="fa-solid fa-circle-question"></i>
+                    FAQ
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="btn btn-outline btn-primary">
+                    <i class="fa-solid fa-book-open"></i>
+                    Learn
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="btn btn-outline btn-primary">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    LogOut
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a href="" class="flex items-center gap-1">
+              <span class="font-bold text-lg">English</span>
+              <img src="assets/logo.png" alt="" />
+              <span class="text-lg font-semibold font-bangla">জানালা</span>
+            </a>
+          </div>
+
+          <div class="navbar-end hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 space-x-4">
+              <li>
+                <a href="" class="btn btn-outline btn-primary">
+                  <i class="fa-solid fa-circle-question"></i>
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a href="" class="btn btn-outline btn-primary">
+                  <i class="fa-solid fa-book-open"></i>
+                  Learn
+                </a>
+              </li>
+              <li>
+                <a href="" class="btn btn-outline btn-primary">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  LogOut
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header section end  -->
+
+    <!-- Main Section Start -->
+    <main >
+      <!-- hero section start  -->
+      <section
+        class="w-11/12 mx-auto flex flex-col-reverse md:flex-row justify-between items-center gap-10"
+      >
+        <!-- hero left -->
+        <div class="flex-1 text-center md:text-left">
+          <h2 class="text-4xl md:text-5xl font-bold mb-4 md:mb-8">
+            <span class="text-[#00BCFF]">English</span> is Easy!!
+          </h2>
+          <p class="font-bangla">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+            আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+            অন্য একটি Level এ
+          </p>
+        </div>
+
+        <!-- hero right  -->
+        <div class="flex-1">
+          <img src="assets/hero-student.png" alt="" />
+        </div>
+      </section>
+      <!-- hero sectio end  -->
+
+      <!-- Learn Vocabularies section start  -->
+      <section>
+        <!-- Lesson section start -->
+        <div class="space-y-7 my-7">
+          <div>
+            <h2 class="text-4xl font-bold text-center">
+              <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
+            </h2>
+          </div>
+
+          <!-- Lessons button container  start-->
+          <div
+            id="lessons-container"
+            class="flex gap-2 justify-center flex-wrap"
+          ></div>
+          <!-- Lessons button container  end-->
+        </div>
+        <!-- ------------Lesson section end-------------- -->    
+
+        <!--------------- word Card section start ------------ -->
+        <div
+          id="word-container"
+          
+          class="bg-[#F8F8F8] w-11/12 mx-auto min-h-60 rounded-2xl
+          grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 p-4
+          "
+        >
+
+          <div class="col-span-full text-center space-y-4 mt-11">
+            <p class="text-gray-500 font-bangla">আপনি এখনো কোন Lesson Select করেন নি</p>
+            <h2 class="text-4xl font-semibold ">
+              একটি Lesson Select করুন।
+            </h2>
+          </div>
+
+
+
+        </div>
+        <!-- ----------------word Card section end ---------------- -->
+      </section>
+      <!-- Learn Vocabularies section End  -->
+    </main>
+
+
+
+
+<!-- Open the modal using ID.showModal() method -->
+<!--
+ <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+ 
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <script src="script.js"></script>
+  </body>
 </html>
