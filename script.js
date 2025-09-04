@@ -9,6 +9,7 @@ loadLessons();
 
 // 2) Creating buttons for every Lessons from API----------
 const displayLesson = (lessons) => {
+
   // getting the lesson container
   const lessonContainer = document.getElementById("lessons-container");
   lessons.forEach((lesson) => {
@@ -42,7 +43,7 @@ const loadIfo = (id) => {
 
    
 
-
+// ------loadng all word based on lessons id --
   const url = `https://openapi.programming-hero.com/api/level/${id}`;
   fetch(url)
     .then((res) => res.json())
@@ -69,6 +70,7 @@ const loadIfo = (id) => {
 
 // 4) Creating Card for every words---------------
 const displayInfo = (words) => {
+    // console.log(words);
   const wordContainer = document.getElementById("word-container");
   wordContainer.innerHTML = "";
 
@@ -97,6 +99,7 @@ const displayInfo = (words) => {
 
 // ---------Adding validaion from video 6 --------
   words.forEach((word) => {
+    // console.log(word.id);
     const div = document.createElement("div");
     div.className = `
   bg-white text-center rounded-xl shadow-md
@@ -115,7 +118,7 @@ const displayInfo = (words) => {
              "${word.meaning ? word.meaning: "Not found😪"} / ${word.pronunciation ? word.pronunciation : "Not found😪"}"   
             </p>
              <div class="flex justify-between w-full px-6">
-               <button onclick="my_modal_5.showModal()" class="bg-[#1A91FF10] py-2 px-3  rounded-lg hover:bg-[#1A91FF80] cursor-pointer"><i class="fa-solid fa-circle-info"></i></button>
+               <button onclick="wordDetails(${word.id})" class="bg-[#1A91FF10] py-2 px-3  rounded-lg hover:bg-[#1A91FF80] cursor-pointer"><i class="fa-solid fa-circle-info"></i></button>
                <button class="bg-[#1A91FF10] py-2 px-3  rounded-lg hover:bg-[#1A91FF80] cursor-pointer"><i class="fa-solid fa-volume-high"></i></button>
              </div>
 
@@ -124,3 +127,15 @@ const displayInfo = (words) => {
     wordContainer.appendChild(div);
   });
 };
+
+
+const wordDetails =async (id) => {
+
+    const url = `https://openapi.programming-hero.com/api/word/${id}`
+
+    const resopose =await fetch(url)
+    const details =await resopose.json()
+    console.log(details);
+    
+
+}
