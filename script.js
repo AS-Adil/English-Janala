@@ -135,7 +135,51 @@ const wordDetails =async (id) => {
 
     const resopose =await fetch(url)
     const details =await resopose.json()
-    console.log(details);
+    showModals(details.data);
     
+
+}
+
+const showModals = (word) => {
+
+  const createElements = (arr) => {
+    const htmls = arr.map( (el) => `<button class="modal-btn bg-[#EDF7FF] px-6 py-2 rounded-md"><span>${el}</span></button> `);
+    return htmls.join(" ");
+
+  }
+
+ const modal = document.getElementById('modal')
+ modal.innerHTML = `
+ 
+  
+      <div class="space-y-1">
+        <h2 class="text-2xl font-bold">
+          ${word.word} (<i class="fa-solid fa-microphone-lines"></i> :  ${word.pronunciation} )
+        </h2>
+      </div>
+
+      <div class="space-y-1">
+        <h2 class="font-bold">Meaning</h2>
+        <p>${word.meaning}</p>
+      </div>
+
+      <div class="space-y-1">
+        <h2 class="font-bold">Example</h2>
+        <p>${word.sentence}</p>
+      </div>
+
+      <div class="space-y-1">
+        <h2 class="font-bold">সমার্থক শব্দ গুলো</h2>
+        <div>
+         ${createElements(word.synonyms)}
+        </div>
+      
+        
+      </div>
+
+ `
+
+  document.getElementById('word_modal').showModal();
+
 
 }
