@@ -33,8 +33,10 @@ const removeActive = () => {
   }
 };
 
+
 // 3)------------------- Getting all the words for every lesson ------------------
 const loadIfo = (id) => {
+  // console.log(id);
   removeActive();
   const clickedBtn = document.getElementById(`lesson-btn-${id}`);
   clickedBtn.classList.add("active");
@@ -62,7 +64,12 @@ const spinner = (status) => {
   }
 };
 
-
+//8) ---- function for pronouncing----------
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-EN"; // English
+  window.speechSynthesis.speak(utterance);
+}
 
 
 // 4)---------------- Creating Card for every words------------------
@@ -114,7 +121,7 @@ const displayInfo = (words) => {
                })" class="bg-[#1A91FF10] py-2 px-3  rounded-lg hover:bg-[#1A91FF80] cursor-pointer"><i class="fa-solid fa-circle-info"></i>
                </button>
 
-               <button class="bg-[#1A91FF10] py-2 px-3  rounded-lg hover:bg-[#1A91FF80] cursor-pointer"><i class="fa-solid fa-volume-high"></i>
+               <button onclick = "  pronounceWord('${word.word}') " class="bg-[#1A91FF10] py-2 px-3  rounded-lg hover:bg-[#1A91FF80] cursor-pointer"><i class="fa-solid fa-volume-high"></i>
                </button>
             </div>
 
@@ -142,6 +149,7 @@ const showModals = (word) => {
       (el) =>
         `<button class="modal-btn bg-[#EDF7FF] px-6 py-2 rounded-md"><span>${el}</span></button> `
     );
+    // console.log(htmls);
     return htmls.join(" ");
   };
 
@@ -196,7 +204,7 @@ document.getElementById("search-btn").addEventListener("click", () => {
       const filteredWord = allWord.filter((word) =>
         word.word.trim().toLowerCase().includes(inputsValue)
       );
-
+      console.log(filteredWord);
       displayInfo(filteredWord);
     });
 });
