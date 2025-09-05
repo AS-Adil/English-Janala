@@ -115,12 +115,22 @@
     </header>
     <!-- header section end  -->
 
+
+
+
+
+
+
     <!-- Main Section Start -->
-    <main >
+    <main>
+
+
+
       <!-- hero section start  -->
       <section
         class="w-11/12 mx-auto flex flex-col-reverse md:flex-row justify-between items-center gap-10"
       >
+
         <!-- hero left -->
         <div class="flex-1 text-center md:text-left">
           <h2 class="text-4xl md:text-5xl font-bold mb-4 md:mb-8">
@@ -157,66 +167,67 @@
           ></div>
           <!-- Lessons button container  end-->
         </div>
-        <!-- ------------Lesson section end-------------- -->    
+        <!-- ------------Lesson section end-------------- -->
+
+        <!-- input field start -->
+        <div class="mb-5 flex justify-center">
+          <div class="join">
+            <div>
+              <label class="input validator join-item">
+                <input
+                  id="input"
+                  type="ext"
+                  placeholder="Searh Word"
+                  required
+                />
+              </label>
+            </div>
+            <button id="search-btn" class="btn btn-primary join-item px-6">
+              Search
+            </button>
+          </div>
+        </div>
+        <!-- input field end -->
+
+        <!-- spinner section strat -->
+        <div id="spinner" class="flex justify-center mb-6 hidden">
+          <span class="loading loading-bars loading-xl"></span>
+        </div>
+        <!-- spinner section end -->
 
         <!--------------- word Card section start ------------ -->
         <div
           id="word-container"
-          
-          class="bg-[#F8F8F8] w-11/12 mx-auto min-h-60 rounded-2xl
-          grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 p-4
-          "
+          class="bg-[#F8F8F8] w-11/12 mx-auto min-h-60 rounded-2xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 p-4"
         >
-
           <div class="col-span-full text-center space-y-4 mt-11">
-            <p class="text-gray-500 font-bangla">আপনি এখনো কোন Lesson Select করেন নি</p>
-            <h2 class="text-4xl font-semibold ">
-              একটি Lesson Select করুন।
-            </h2>
+            <p class="text-gray-500 font-bangla">
+              আপনি এখনো কোন Lesson Select করেন নি
+            </p>
+            <h2 class="text-4xl font-semibold">একটি Lesson Select করুন।</h2>
           </div>
-
-
-
         </div>
         <!-- ----------------word Card section end ---------------- -->
       </section>
       <!-- Learn Vocabularies section End  -->
     </main>
 
-
-
-
-<!-- Open the modal using ID.showModal() method -->
-<!--
+    <!-- Open the modal using ID.showModal() method -->
+    <!--
  <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
- 
-<dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
-  <div class="modal-box">
-   
-    <div  id="modal" class="space-y-4">
-      
 
+    <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="modal" class="space-y-4"></div>
 
-
-
-
-
-
-
-            
-    </div>
-
-
-    <div class="modal-action">
-      <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
-        <button class="btn">Close</button>
-      </form>
-    </div>
-  </div>
-</dialog>
-
- 
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
 
     <br />
     <br />
@@ -226,12 +237,7 @@
     <br />
     <br />
     <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+  
 
     <script src="script.js"></script>
   </body>
